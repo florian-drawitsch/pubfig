@@ -57,7 +57,7 @@ scaleRel = pos(3:4) ./ 5;
 
 % Define adaptive default values
 tickLengthAuto = 0.025 * 1.2.^scaleRel;
-lineWidthAuto = 0.25 * 1.2^round(mean(scaleRel));
+lineWidthAuto = max([0.5, 0.25 * 1.2^round(mean(scaleRel))]);
 fontSizeAuto = 10 * 1.2^round(mean(scaleRel));
 
 % Define input argument parser
