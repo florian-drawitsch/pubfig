@@ -1,5 +1,6 @@
 function [f, ax] = pubfig_simple()
-%example_simple Simple example for pub-fig usage
+%pubfig_simple provides a basic usage example for the figure 
+% and axes handle modifiers of pubfig 
 % Author: Florian Drawitsch <florian.drawitsch@gmail.com>
 
 % Set relative package path
@@ -26,9 +27,9 @@ f = setFigureHandle(f, 'width', 5, 'height', 5);
 ax = setAxesHandle(ax);
 
 % Save in example vector and raster graphics formats
-% After pubfig pass
-print(f, 'pubfig_simple.pdf', '-dpdf');
-saveas(f, 'pubfig_simple.png');
+output_prefix = mfilename;
+print(f, [output_prefix, '.pdf'], '-dpdf');
+saveas(f, [output_prefix, '.png']);
 
 end
 
