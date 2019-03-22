@@ -1,3 +1,6 @@
+### About Pubfig
+Pubfig is a collection of tools facilitating the plotting of reproducible, publication-quality figures with Matlab.
+
 ### Rationale
 Matlab's plotting libraries are extremely powerful, yet the default settings produce questionable figures in terms of readability and aesthetics.
 
