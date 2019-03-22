@@ -2,6 +2,13 @@ function path_hashes = getGitHashes(paths)
 %getGitHashes retrieves git commit and blob hashes for the specified
 % filepaths. Evidently, the respective folder must be under git version
 % control for this to work.
+%   INPUT:  paths: str or cell array of str
+%                   Full filepaths for which git hashes shall be retrieved
+%   OUTPUT: path_hashes: table
+%                   Table containing paths, commit hashes and blob hashes 
+%   Usage example:
+%       path_hashes = getGitHashes({'/foo1/bar1.m', '/foo2/bar2.xml' })
+% Author: Florian Drawitsch <florian.drawitsch@gmail.com>
 
 commitHashes = cell(numel(paths),1);
 blobHashes = cell(numel(paths),1);
@@ -22,7 +29,6 @@ for i = 1:numel(paths)
     end
     
     try
-        
         % Query current commit hash of the git repository
         [status, git_status] = system('git rev-parse HEAD');
         if status
@@ -43,14 +49,12 @@ for i = 1:numel(paths)
             idx = strcmp(c{4}, [fname, ext]);
             blobHashes{i} = c{3}{idx};
         end
-       
-    catch
         
+    catch
         warning(...
-            ['Error getting HEAD commit hash for ...', directory, '... ', ...
+            ['Error getting retrieving hashes for ...', directory, '... ', ...
             'Make sure you have git installed, the specified paths are inside a valid repository ',...
             'and you have staged and commited them before invoking this function'])
-        
     end
     
     cd(currentDir);

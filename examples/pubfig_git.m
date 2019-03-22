@@ -1,6 +1,6 @@
 function [f, ax] = pubfig_git()
 %pubfig_git provides an extended usage example demonstrating
-% how figures can be generated with watermarks indicating
+% how figures can be generated with auxiliary tables indicating
 % the git commit and blob hashes of relevant data files
 % Author: Florian Drawitsch <florian.drawitsch@gmail.com>
 
@@ -42,7 +42,7 @@ paths = {mfilename('fullpath'), which('data_1'), which('data_2')};
 % precisely reconstruct how a given figure was generated at a later time
 % point
 path_hashes = getGitHashes(paths);
-writetable(path_hashes, [output_prefix, '.csv'])
+writetable(path_hashes, [output_prefix, '.csv']);
 
 end
 
