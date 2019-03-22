@@ -3,7 +3,7 @@ function [f, ax] = pubfig_simple()
 % Author: Florian Drawitsch <florian.drawitsch@gmail.com>
 
 % Set relative package path
-addpath(fullfile(pwd,'..'));
+addpath(fullfile(pwd,'..','pubfig'));
 
 % Import data
 [x1, y1] = data_1();
