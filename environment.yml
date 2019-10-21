@@ -1,0 +1,5 @@
+name: pubfig
+
+dependencies:
+  - python=3.7
+  - matplotlib
