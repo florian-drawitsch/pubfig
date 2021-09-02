@@ -23,8 +23,8 @@ ax.YLabel.String = 'Var 2';
 ax.Title.String = {'My arbitrary','correlation'};
 
 % Pass figure and axes handles through pubfig utilities
-f = setFigureHandle(f, 'width', 5, 'height', 5);
-ax = setAxesHandle(ax);
+f = set_figure_handle(f, 'width', 5, 'height', 5);
+ax = set_axes_handle(ax);
 
 % Save in example vector and raster graphics formats
 output_prefix = mfilename;

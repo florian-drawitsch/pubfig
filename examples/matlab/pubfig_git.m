@@ -24,8 +24,8 @@ ax.YLabel.String = 'Var 2';
 ax.Title.String = {'My arbitrary','correlation'};
 
 % Pass figure and axes handles through pubfig utilities
-f = setFigureHandle(f, 'width', 5, 'height', 5);
-ax = setAxesHandle(ax);
+f = set_figure_handle(f, 'width', 5, 'height', 5);
+ax = set_axes_handle(ax);
 
 % Save in example vector and raster graphics formats
 output_prefix = mfilename;
@@ -41,7 +41,7 @@ paths = {mfilename('fullpath'), which('data_1'), which('data_2')};
 % Retrieve git hashes of these paths and write them to csv to allow to 
 % precisely reconstruct how a given figure was generated at a later time
 % point
-path_hashes = getGitHashes(paths);
+path_hashes = get_git_hashes(paths);
 writetable(path_hashes, [output_prefix, '.csv']);
 
 end
