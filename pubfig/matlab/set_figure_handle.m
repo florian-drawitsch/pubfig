@@ -1,4 +1,4 @@
-function f = setFigureHandle(f, varargin)
+function f = set_figure_handle(f, varargin)
 % setFigureHandle allows to conveniently set figure properties relevant for
 % publication-quality figures
 %   It allows to easily set common paper sizes and orientations,

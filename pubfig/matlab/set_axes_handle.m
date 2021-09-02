@@ -1,4 +1,4 @@
-function ax = setAxesHandle(ax, varargin)
+function ax = set_axes_handle(ax, varargin)
 % setAxisHandle allows to conveniently set axes properties relevant for
 % publication-quality figures
 %   It allows to easily set common paper sizes and orientations,

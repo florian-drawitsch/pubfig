@@ -1,4 +1,4 @@
-function path_hashes = getGitHashes(paths)
+function path_hashes = get_git_hashes(paths)
 %getGitHashes retrieves git commit and blob hashes for the specified
 % filepaths. Evidently, the respective folder must be under git version
 % control for this to work.
